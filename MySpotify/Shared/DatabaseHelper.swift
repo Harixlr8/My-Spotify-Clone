@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Security
 
 struct DatabaseHelper {
     
@@ -26,7 +27,8 @@ struct DatabaseHelper {
         let userArray = try JSONDecoder().decode(UsersResponse.self, from: data)
         return userArray.users
     }
-
+ 
+    
 }
 
 

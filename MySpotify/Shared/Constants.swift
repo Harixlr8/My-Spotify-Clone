@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-    static let url : String = "https://picsum.photos/300/300"
+    static let randomImage : String = "https://picsum.photos/300/300"
 }

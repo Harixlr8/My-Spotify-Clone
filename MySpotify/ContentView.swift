@@ -6,19 +6,24 @@
 //
 
 import SwiftUI
+import SwiftfulRouting
 
 struct ContentView: View {
+    @Environment(\.router) var router
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Open Spotify") {
+                router.showScreen { _ in
+                    SpotifyHomeView()
+                }
+            }
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    RouterView { _ in
+        ContentView()
+    }
 }

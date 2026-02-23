@@ -13,37 +13,46 @@ struct ProductArray: Codable {
 }
 
 // MARK: - Product
-struct Product: Codable {
+struct Product: Codable , Identifiable{
     let id: Int
     let title, description, category: String
     let price, discountPercentage, rating: Double
     let stock: Int
     let tags: [String]
-    let brand, sku: String
     let weight: Int
-    let dimensions: Dimensions
-    let warrantyInformation, shippingInformation, availabilityStatus: String
-    let reviews: [Review]
     let returnPolicy: String
     let minimumOrderQuantity: Int
-    let meta: Meta
     let thumbnail: String
     let images: [String]
+
+    var firstImage : String {
+        images.first ?? Constants.randomImage
+    }
+    
+    static var mock : Product {
+        Product(
+            id: 1,
+            title: "Apple",
+            description: "This is a mock descriptin and can be quite long you know so prepare yourself for the banger to be handled",
+            category: "Music",
+            price: 999.99,
+            discountPercentage: 12,
+            rating: 4,
+            stock: 88,
+            tags: ["Nice"],
+            weight: 10,
+            returnPolicy: "No returns",
+            minimumOrderQuantity: 4,
+            thumbnail: "Apple products",
+            images: [Constants.randomImage , Constants.randomImage]
+        )
+    }
 }
 
-// MARK: - Dimensions
-struct Dimensions: Codable {
-    let width, height, depth: Double
-}
 
-// MARK: - Meta
-struct Meta: Codable {
-    let createdAt, updatedAt, barcode, qrCode: String
-}
 
-// MARK: - Review
-struct Review: Codable {
-    let rating: Int
-    let comment, date, reviewerName, reviewerEmail: String
+struct ProductRow : Identifiable {
+    let id : String = UUID().uuidString
+    let title : String
+    let products : [Product]
 }
-

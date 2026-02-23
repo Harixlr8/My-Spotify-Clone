@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		77C69B992EEEF769001D6933 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 77C69B982EEEF769001D6933 /* SDWebImageSwiftUI */; };
+		77C69BC02EEF462E001D6933 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 77C69BBF2EEF462E001D6933 /* SwiftfulUI */; };
+		77C69BC32EEF4660001D6933 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 77C69BC22EEF4660001D6933 /* SwiftfulRouting */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		77C69B892EEEF5FA001D6933 /* MySpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		77E3E1EB2F1A31750022D917 /* Exceptions for "MySpotify" folder in "MySpotify" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 77C69B882EEEF5FA001D6933 /* MySpotify */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		77C69B8B2EEEF5FA001D6933 /* MySpotify */ = {
+		77C69BA72EEEFA67001D6933 /* MySpotify */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				77E3E1EB2F1A31750022D917 /* Exceptions for "MySpotify" folder in "MySpotify" target */,
+			);
 			path = MySpotify;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C69BC02EEF462E001D6933 /* SwiftfulUI in Frameworks */,
+				77C69BC32EEF4660001D6933 /* SwiftfulRouting in Frameworks */,
+				77C69B992EEEF769001D6933 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,8 +54,8 @@
 		77C69B802EEEF5FA001D6933 = {
 			isa = PBXGroup;
 			children = (
-				77C69B8B2EEEF5FA001D6933 /* MySpotify */,
 				77C69B8A2EEEF5FA001D6933 /* Products */,
+				77C69BA72EEEFA67001D6933 /* MySpotify */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +83,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				77C69B8B2EEEF5FA001D6933 /* MySpotify */,
+				77C69BA72EEEFA67001D6933 /* MySpotify */,
 			);
 			name = MySpotify;
 			packageProductDependencies = (
+				77C69B982EEEF769001D6933 /* SDWebImageSwiftUI */,
+				77C69BBF2EEF462E001D6933 /* SwiftfulUI */,
+				77C69BC22EEF4660001D6933 /* SwiftfulRouting */,
 			);
 			productName = MySpotify;
 			productReference = 77C69B892EEEF5FA001D6933 /* MySpotify.app */;
@@ -94,6 +119,11 @@
 			);
 			mainGroup = 77C69B802EEEF5FA001D6933;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				77C69B972EEEF769001D6933 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				77C69BBE2EEF462E001D6933 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				77C69BC12EEF4660001D6933 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 77C69B8A2EEEF5FA001D6933 /* Products */;
 			projectDirPath = "";
@@ -249,10 +279,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MySpotify/MySpotify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySpotify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,10 +312,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MySpotify/MySpotify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySpotify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +362,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		77C69B972EEEF769001D6933 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
+		77C69BBE2EEF462E001D6933 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		77C69BC12EEF4660001D6933 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77C69B982EEEF769001D6933 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C69B972EEEF769001D6933 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		77C69BBF2EEF462E001D6933 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C69BBE2EEF462E001D6933 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		77C69BC22EEF4660001D6933 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77C69BC12EEF4660001D6933 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77C69B812EEEF5FA001D6933 /* Project object */;
 }
